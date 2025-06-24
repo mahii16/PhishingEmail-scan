@@ -1,0 +1,17 @@
+From: Apple Support <support@apple.security-alert.com>
+To: user@example.com
+Subject: [Urgent] Unusual Login Attempt Detected
+
+Dear Customer,
+
+We have detected an unusual login attempt on your Apple ID account from an unknown device in Russia.
+
+To ensure your account security, please confirm your identity immediately by logging in at the link below:
+
+https://appleid.apple-login-verification.com
+
+If you do not confirm within 24 hours, your account will be locked permanently for security reasons.
+
+Thank you for using Apple services.
+
+Apple Security Team

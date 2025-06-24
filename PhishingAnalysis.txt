@@ -1,0 +1,46 @@
+Phishing Email Analysis Report
+
+1. Sender Details:
+   - Email: support@apple.security-alert.com
+   - Domain used is not the official Apple domain.
+   - Subdomain trick ("security-alert.com") is used to appear legitimate.
+   - Return path differs from official Apple domains.
+
+2. Subject:
+   - "[Urgent] Unusual Login Attempt Detected"
+   - Creates panic to pressure the user into immediate action.
+
+3. Message Body:
+   - Generic greeting: "Dear Customer"
+   - Threatening tone: "If you do not confirm within 24 hours..."
+   - Phishing link: https://appleid.apple-login-verification.com
+     → This is not an Apple domain.
+     → Uses keyword stuffing (apple-login-verification) to seem legit.
+
+4. Technical Header Analysis:
+   - SPF: **FAIL** (Sender’s domain does not authorize this sending IP)
+   - DKIM: **FAIL** (Digital signature does not match domain identity)
+   - DMARC: **FAIL** (Domain’s policy to reject spoofed messages was violated)
+   - Tool used: [MxToolbox Email Header Analyzer](https://mxtoolbox.com/EmailHeaders.aspx)
+
+5. Screenshot Evidence:
+   - See `screenshots/header-analysis.png` for full MxToolbox output showing all failed validations.
+
+6. Browser Behavior:
+   - Visiting the link (https://appleid.apple-login-verification.com) triggered Chrome’s phishing protection.
+   - Warning: "Dangerous site — attackers might trick you into revealing passwords or credit card numbers."
+   - Screenshot saved as `dangerous-site-warning.png`
+
+7. VirusTotal Link Analysis:
+   - URL checked against 97 security vendors
+   - Trustwave flagged it as "Suspicious"
+   - Screenshot saved as `virustotal-check.png`
+
+8. Conclusion:
+   This is a well-crafted phishing attempt that uses:
+   - Domain spoofing
+   - Urgency and fear
+   - Generic greetings
+   - Fake login links
+   - Failed SPF, DKIM, and DMARC
+   The email is clearly malicious and should be reported or deleted immediately.

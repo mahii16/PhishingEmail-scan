@@ -1,0 +1,11 @@
+Return-Path: <support@apple.security-alert.com>
+Received: from mail.apple.security-alert.com (mail.apple.security-alert.com. [192.0.2.45])
+        by mx.google.com with ESMTP id x7si1527381qtv.122.2025.06.24.08.41.07
+        for <user@example.com>;
+        Wed, 24 Jun 2025 08:41:07 -0700 (PDT)
+Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of support@apple.security-alert.com does not designate 192.0.2.45 as permitted sender)
+       dkim=fail header.i=@apple.security-alert.com
+       dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=apple.security-alert.com
+From: Apple Support <support@apple.security-alert.com>
+Subject: [Urgent] Unusual Login Attempt Detected
